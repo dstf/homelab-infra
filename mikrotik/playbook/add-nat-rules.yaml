@@ -1,0 +1,12 @@
+---
+- name: Add NAT Rule on MikroTik Router
+  hosts: routers
+  gather_facts: false
+  # become: yes
+
+  tasks:
+    - name: Add NAT Rule
+      community.routeros.command:
+        commands:
+          - "/ip firewall nat add chain=dstnat dst-address=\"{{ public_ip }}\" dst-port=80-443 action=dst-nat protocol=tcp to-address=\"{{ proxmox_server }}\" to-port=80-443"
+

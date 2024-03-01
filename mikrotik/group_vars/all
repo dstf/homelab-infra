@@ -1,0 +1,3 @@
+public_ip: 
+proxmox_prod: 192.168.88.2
+proxmox_dev: 192.168.88.3
