@@ -13,7 +13,7 @@ provider "proxmox" {
   pm_api_token_secret = var.token_secret
 #  pm_user         = var.pm_user
 #  pm_password     = var.pm_password
-  pm_tls_insecure = true # Change to false if you have your
+  pm_tls_insecure = true # Change to false if needed
 
   pm_parallel     = 10
   pm_timeout      = 600
